@@ -1,0 +1,9 @@
+{
+  "name": "AI Career Copilot",
+  "description": "An AI-powered career assistant to build FAANG-ready resumes, optimize LinkedIn, track jobs, generate cover letters, and ace interviews with a real-time copilot.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ],
+  "prompt": ""
+}

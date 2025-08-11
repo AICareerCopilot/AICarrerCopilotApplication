@@ -1,0 +1,47 @@
+{
+  "name": "ai-career-copilot",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An AI-powered career assistant to build FAANG-ready resumes, optimize LinkedIn, track jobs, generate cover letters, and ace interviews with a real-time copilot.",
+  "main": "electron.js",
+  "homepage": ".",
+  "scripts": {
+    "start": "npx serve -l 3000",
+    "electron:dev": "concurrently \"npm:start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron:package": "electron-builder"
+  },
+  "dependencies": {
+    "@google/genai": "^1.12.0",
+    "docx": "^8.5.0",
+    "html2pdf.js": "^0.10.2",
+    "lucide-react": "^0.536.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^29.1.5",
+    "electron-builder": "^24.13.3",
+    "is-dev": "^3.0.0",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.yourname.aicareercopilot",
+    "productName": "AI Career Copilot",
+    "files": [
+      "**/*",
+      "!dist/",
+      "!node_modules/",
+      "!*.env"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}

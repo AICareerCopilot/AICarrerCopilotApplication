@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- PWA Tags -->
+    <link rel="manifest" href="./manifest.json" />
+    <meta name="theme-color" content="#0A091A">
+    <link rel="apple-touch-icon" href="./icons/icon-192x192.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AI Copilot">
+
+    <title>AI Career Copilot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .keyword-tooltip {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s, visibility 0.3s;
+      }
+      .keyword-highlight:hover .keyword-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+            },
+            colors: {
+              background: '#0A091A',
+              card: '#141327',
+              border: 'rgba(255, 255, 255, 0.08)',
+              'text-primary': '#F0F0F0',
+              'text-secondary': '#A0A0B0',
+              accent: {
+                DEFAULT: '#8B5CF6', // violet-500
+                'light': '#A78BFA', // violet-400
+              },
+              brand: {
+                  cyan: '#22D3EE',
+                  violet: '#8B5CF6',
+              },
+              pink: { DEFAULT: '#FF6482' },
+              purple: { DEFAULT: '#A259FF' },
+              aqua: { DEFAULT: '#2DD4BF' },
+              coral: { DEFAULT: '#F97316' },
+              mint: { DEFAULT: '#4ADE80' },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.12.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.536.0",
+    "html2pdf.js": "https://esm.sh/html2pdf.js@0.10.2",
+    "docx": "https://esm.sh/docx@8.5.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-background text-text-primary font-sans">
+    <div id="app-background" class="fixed inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#202030_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

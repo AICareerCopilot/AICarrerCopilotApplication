@@ -1,0 +1,28 @@
+{
+  "name": "AI Career Copilot",
+  "short_name": "AICopilot",
+  "description": "An AI-powered career assistant to build FAANG-ready resumes, optimize LinkedIn, track jobs, generate cover letters, and ace interviews with a real-time copilot.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0A091A",
+  "theme_color": "#8B5CF6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/icons/maskable-icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ]
+}
